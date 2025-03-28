@@ -13,4 +13,6 @@
     * document.querySelect... 안 쓴다.
     * vue create ~
       * Babel 필수 >> JS 컴파일러 역할
+      * Router
       * 3.x 감
+      * component는 3개가 한 세트
