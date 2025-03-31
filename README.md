@@ -54,3 +54,34 @@
     * update : 변경 (데이터 바인딩)
     * destroy : 소멸
     * property : vue가 가지는 데이터
+
+    * npm run serve 서버실행
+    * databinding 연속 추가 가능
+      * 컴포넌트는 독립적이다.
+    * .lazy
+      * 지연 / 사용자 입력 확인 시 이벤트 처리
+    * 컴포넌트, 데이터 바인딩 핵심 -_-;; 어렵다.
+
+    * <input type="checkbox" v-model="chData" true-value="여" false-value="부">
+    * <p>{{ chData }}</p>
+      * ture, false value 대체값 설정 가능
+
+    * <div>
+    *   <input type="checkbox" value="서울" v-model="city">서울
+    *   <input type="checkbox" value="대구" v-model="city">대구
+    *   <p>{{ city }}</p>
+    * </div>
+      * checkbox 배열 덮어쓰지 않는다. v-model = [] value 값 바뀌면 해당하는 value 값이 []안에 들어감
+    
+    * v-for="(prod, index) in products 반복문
+
+    * 조건문
+    * <div>
+    *   <input type="number" v-model="grade">
+    *   <p v-if="grade >= 90">성적 : A</p>
+    *   <p v-else-if="grade >= 80">성적 : B</p>
+    *   <p v-else-if="grade >= 70">성적 : C</p>
+    *   <p v-else>성적 : D</p>
+    * </div>
+
+    * v-model, v-show / data에 boolean값 넣으면 보여짐(check 유무에 따라..)
