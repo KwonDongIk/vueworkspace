@@ -53,3 +53,4 @@
     * mount : virtual Dom(먼저 업데이트) => Real Dom(문제없으면 업뎃) / 시각적으로 화면에 보이는 걸 확인
     * update : 변경 (데이터 바인딩)
     * destroy : 소멸
+    * property : vue가 가지는 데이터
