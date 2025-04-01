@@ -6,6 +6,7 @@
 </template>
 <script>
   import PropsCom from './components/PropsComponent.vue';
+  import TextModal from './views/TextModal.vue';
 
   export default{
     data(){
@@ -14,7 +15,7 @@
       }
     },
     components : {
-      PropsCom,
+      PropsCom, TextModal
     },
     created(){
       console.log('App.vue Created');

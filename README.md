@@ -142,3 +142,11 @@
     * component 정순 app ->
   * mounted
     * component 역순 propscomponent -> app
+
+  * ref
+    * 요소에 접근.. js의 document.queryselect와 유사하다라고 보면됨
+
+  * slot
+    * modal layout
+    * 컴포넌트 내에서 다른 컴포넌트를 사용할 때 쓰는 컴포넌트의 마크업을 재정의하거나 확장하는 기능
+    * 이름없는애 default

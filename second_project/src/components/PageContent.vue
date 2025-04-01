@@ -25,7 +25,29 @@
 </template>
 <script>
   export default{
-    props : ['title', 'count', 'writer', 'regdate', 'content'],
+    //props : ['title', 'count', 'writer', 'regdate', 'content'],
+    props : {
+      title : String,
+      count : {
+        type : Number,
+        default : 0
+      },
+      writer : {
+        type : [String, Object],
+        default : function(){
+          return{first : 'Ronaldo', second : "Messi"}
+        }
+      },
+      regdate : {
+        required : true,
+        validator : function(value){
+          // yyyy-mm-dd
+          let format = /[1-2][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]/ // 날짜 정규표현식
+          return format.test(value);
+        }
+      },
+      content : String
+    },
     computed : {
       readInfo(){
         return this.count+1;
@@ -33,7 +55,7 @@
     },
     methods : {
       updateInfo(){
-
+        this.$emit('update-info', this.readInfo);
       }
     }
       
