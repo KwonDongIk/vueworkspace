@@ -67,21 +67,54 @@
       * ture, false value 대체값 설정 가능
 
     * <div>
-    *   <input type="checkbox" value="서울" v-model="city">서울
-    *   <input type="checkbox" value="대구" v-model="city">대구
-    *   <p>{{ city }}</p>
-    * </div>
+        <input type="checkbox" value="서울" v-model="city">서울
+        <input type="checkbox" value="대구" v-model="city">대구
+        <p>{{ city }}</p>
+      </div>
       * checkbox 배열 덮어쓰지 않는다. v-model = [] value 값 바뀌면 해당하는 value 값이 []안에 들어감
     
     * v-for="(prod, index) in products 반복문
 
     * 조건문
     * <div>
-    *   <input type="number" v-model="grade">
-    *   <p v-if="grade >= 90">성적 : A</p>
-    *   <p v-else-if="grade >= 80">성적 : B</p>
-    *   <p v-else-if="grade >= 70">성적 : C</p>
-    *   <p v-else>성적 : D</p>
-    * </div>
+        <input type="number" v-model="grade">
+        <p v-if="grade >= 90">성적 : A</p>
+        <p v-else-if="grade >= 80">성적 : B</p>
+        <p v-else-if="grade >= 70">성적 : C</p>
+        <p v-else>성적 : D</p>
+      </div>
 
     * v-model, v-show / data에 boolean값 넣으면 보여짐(check 유무에 따라..)
+
+* 250401
+  * Vuejs는..
+    * SPA : 지향성
+    * MVVM : 디자인 패턴
+    * 데이터 바인딩
+    * Virtual-Dom
+
+  * <button onclick = "seleted()">
+    * selected() 즉시호출
+    * 함수 호출 구문으로 해석
+    * 버튼 클릭 시 selected 함수가 실행되고 그 반환값이 이벤트 핸들러로 사용
+      * 이벤트 핸들러
+        * 이벤트 발생 시 사용되는 코드
+    * 이벤트 객체를 사용하려면 onclick = "selected(event)"형태로 명시적으로 전달해야함
+  * <button onclick = "selected">
+    * 작동하지 않음
+    * selected라는 변수를 찾음
+    * 일반 값으로 해석
+    * selected의 변수 값 반환
+
+  * 이벤트 처리 v-on
+    * @ 심볼로 사용가능
+    * // default
+      <tag event="EventHandler" />
+    * // 심볼 @ 사용
+      <tag @event="EventHandler" />
+    * // 필요에 따라 매개변수를 넘기는 형태로 구현가능
+      <tag @event="EventHandler(parameter)" />
+    * // 하나의 이벤트에 여러 개의 이벤트핸들러를 연결할 수 있음
+      <tag @event="EventHandler1(), EventHandler2()" />
+    * // 이벤트 객체가 필요한 경우
+      <tag @event="EventHandler($event)"/>
