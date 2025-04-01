@@ -4,7 +4,9 @@
     <router-link to="/about">About</router-link> |
     <router-link to="/DataBinding">DataBind</router-link> |
     <router-link :to="{ name : 'listbind'}">ListBind</router-link> |
-    <router-link to="/IfBinding">IfBind</router-link>
+    <router-link to="/IfBinding">IfBind</router-link> |
+    <router-link :to="{ name : 'onevent'}">OnEvent</router-link> |
+    <router-link to="/ComputedWatch">ComputedWatch</router-link>
   </nav>
   <router-view/>
   <!-- <hr>

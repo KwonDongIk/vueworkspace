@@ -1,5 +1,5 @@
 <div align = center>
-  <img src="https://capsule-render.vercel.app/api?type=Venom&color=gradient&height=390&section=header&text=Vuejs%20learning&fontSize=100&animation=fadeIn&fontAlignY=37&desc=Yedam%20Fullstack%20class&descAlignY=60&descAlign=77"/>
+  <img src="https://capsule-render.vercel.app/api?type=Venom&color=gradient&height=390&section=header&text=Vue%20js%20learning&fontSize=100&animation=fadeIn&fontAlignY=37&desc=Yedam%20Fullstack%20class&descAlignY=60&descAlign=79"/>
 </div>
 <hr>
 </div>
@@ -118,3 +118,13 @@
       <tag @event="EventHandler1(), EventHandler2()" />
     * // 이벤트 객체가 필요한 경우
       <tag @event="EventHandler($event)"/>
+
+  * Event 객체 => 이벤트 버블링
+    * 필드
+      * target(고정) 실제 이벤트 발생
+      * currentTarget (유동) 이벤트 버블링을 따라 이벤트가 발생되는 태그
+    * 메서드
+      * preventDefault(); 이벤트의 기본 동작을 취소, 오직 브라우저의 기본 동작만 방지
+      * stopPropagation(); 이벤트 객체의 메서드, 이벤트의 추가적인 전파를 중지
+      * .once 한번 핸들러 동작하면 동작안함
+      * .stop 이벤트 버블링 막아버림
