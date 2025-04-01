@@ -4,7 +4,7 @@
 <hr>
 </div>
 <div align = center>
-  날짜별 자바스크립트 프레임워크 실습
+  자바스크립트 프레임워크 기간 실습
 </div>
 
 * 250328
@@ -21,9 +21,9 @@
   * ajax 
 	  * 웹 개발 기술
      	* 웹 페이지가 서버와 비동기적으로 데이터를 교환할 수 있게 해주는 기술
-     	* 이 기술을 사용하면 전체 페이지를 새로고침하지 않아도 웹 페이지의
-       	  일 부분만 업데이트 가능
-		** 주요 특징
+     	* 이 기술을 사용하면 전체 페이지를 새로고침하지 않아도 웹 페이지의 일 부분만 업데이트 가능
+
+		* 주요 특징
 		  * 비동기 통신
 			  * 사용자가 페이지를 계속 사용하는 동안 서버와 통신이 이루어짐
 		  * 페이지 새로고침 없다
@@ -41,6 +41,7 @@
     * dom clone함
     * 실제 dom의 메모리 내 표현
     * 실제 dom 업데이트를 최소화하여 성능 향상
+
       * 작동방식
         * 상태 변경 발생 시 vitual dom에서 새로운 가상 트리 생성
         * 이전 vitual dom과 새 vitual dom을 비교
@@ -128,3 +129,16 @@
       * stopPropagation(); 이벤트 객체의 메서드, 이벤트의 추가적인 전파를 중지
       * .once 한번 핸들러 동작하면 동작안함
       * .stop 이벤트 버블링 막아버림
+
+  * 부모 -> 자식 props
+  * 자식 -> 부모 event
+
+  * created : 생성
+  * mounted : virtual-DOM => Real-DOM
+  * updated : 데이터 변경
+  * destroyed : 소멸
+
+  * created
+    * component 정순 app ->
+  * mounted
+    * component 역순 propscomponent -> app

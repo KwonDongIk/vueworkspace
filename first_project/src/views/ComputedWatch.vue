@@ -6,14 +6,18 @@
     <p> 과세 금액 : {{ amount }} </p>
     <p> 부가세 10% : {{ tax }} </p>
     <p> 결제 금액 : {{ total }} </p>
+    <p :class="{'warning' : isShow}"> 결제 금액이 5만원을 초과했습니다. </p>
   </div>
 </template>
 <script>
+import { watch } from 'vue';
+
   export default{
     data(){
       return{
         price : 0,
-        count : 0
+        count : 0,
+        isShow : true,
       }
     },
     computed : {
@@ -25,7 +29,19 @@
       },
       total(){
         return this.amount + this.tax;
+      },
+    },
+    watch : {
+      total(){
+        if(this.total>50000){
+          this.isShow = false;
+        }
       }
     }
   }
 </script>
+<style>
+  .warning {
+    display: none;
+  }
+</style>
