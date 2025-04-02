@@ -150,3 +150,22 @@
     * modal layout
     * 컴포넌트 내에서 다른 컴포넌트를 사용할 때 쓰는 컴포넌트의 마크업을 재정의하거나 확장하는 기능
     * 이름없는애 default
+
+* 250402
+  * Axios
+    * Ajax 밖에 안함
+    * node.js와 브라우저를 위한 Promise 기반 HTTP 클라이언트
+
+  * URL + METHOD 네이밍
+  * Ajax
+  * json
+
+  * v-if v-for 태그안에 함께 있을 때..
+    * 우선순위는 if가 높다.
+
+  * browser..
+    * Same Origin Policy
+    * CORS
+  
+  * proxy
+    * 중개
