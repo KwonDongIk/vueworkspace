@@ -169,3 +169,7 @@
   
   * proxy
     * 중개
+
+  * post(등록) -> put(수정)
+
+  * router에게 일시키는 방법 push

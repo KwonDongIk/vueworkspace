@@ -1,8 +1,18 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/customerList">전체조회</router-link>
-  </nav>
+  <!-- Header Component -->
+  <DefaultHeader/>
   <router-view/>
+  <!-- Footer Component -->
 </template>
+
+<script>
+  import DefaultHeader from'@/layout/DefaultHeader.vue'
+
+  export default{
+    components : {
+      DefaultHeader,
+
+    }
+  }
+</script>
 

@@ -13,7 +13,7 @@
         </thead>
         <tbody>
           <template v-if="count > 0">
-            <tr v-for="(info, idx) in customerList" v-bind:key="info.id">
+            <tr v-for="(info, idx) in customerList" v-bind:key="info.id" v-on:click="goToCustomerInfo(info.id)">
               <td>{{ idx+1 }}</td>
               <td>{{ info.id }}</td>
               <td>{{ info.name }}</td>
@@ -52,6 +52,15 @@ import axios from 'axios' // => ajax
         let ajaxRes = await axios.get(`api/customers`)
                                  .catch(err => console.log(err));
         this.customerList = ajaxRes.data;
+      },
+      goToCustomerInfo(custId){
+        this.$router.push({name : 'customerInfo', query : { id : custId }});
+        // query : { key : value } => ?key=value
+
+        // params
+        // 1) route의 path 속성 : '/target/:uId'
+        // 2) params : { uId : value } => /target/value
+
       }
     }
   }
